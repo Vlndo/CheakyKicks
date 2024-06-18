@@ -72,6 +72,8 @@ $police: "Roboto", sans-serif !default;
     @extend %aBtn;
     background: $tiers-color;
     padding: 0.5rem;
+    width: fit-content;
+    transition: all ease 0.5s;
     &:hover {
         cursor: pointer;
         border: $secondary-color solid 1px;
