@@ -1,0 +1,19 @@
+@import "vars";
+
+footer {
+    scroll-snap-align: start;
+    position: relative;
+    z-index: 7;
+    border: solid $primary-color 0.01px;
+    // height: 50vh;
+    background: $header-footer-bg;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    .container {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
