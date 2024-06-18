@@ -23,3 +23,11 @@ body {
     background: $primary-color;
     color: $secondary-color;
 }
+
+h1 {
+    font-family: $police-title;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
