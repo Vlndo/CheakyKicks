@@ -7,7 +7,16 @@ interface CredentialsProps {
 }
 
 const Account: React.FC<CredentialsProps> = ({ email, password }) => {
-    console.log(password);
+    let btnMdp = document.querySelector(".mdp");
+
+    if (btnMdp != null) {
+        btnMdp.addEventListener("click", () => {
+            console.log({ password });
+        });
+    } else {
+        console.log("btnMdp is null");
+    }
+
     return (
         <div>
             <h1>Account</h1>
@@ -16,6 +25,7 @@ const Account: React.FC<CredentialsProps> = ({ email, password }) => {
             <Link to="/" className="btn">
                 Déconnexion
             </Link>
+            <button className="mdp">Mot de passe</button>
         </div>
     );
 };
