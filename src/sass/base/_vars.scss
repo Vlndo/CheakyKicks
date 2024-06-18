@@ -1,0 +1,97 @@
+// Couleurs
+
+$primary-color: #f2f2f2 !default;
+
+$secondary-color: #2d2d2d !default;
+
+$tiers-color: #ffd700 !default;
+
+$header-footer-bg: #fff !default;
+
+// Display
+
+%space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+%justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+%align-center {
+    display: flex;
+    align-items: center;
+}
+
+%space-evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+%space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+// Liens
+
+%a {
+    text-decoration: none;
+    color: $secondary-color;
+    transition: ease 0.3s;
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+// Fonts
+
+$police-title: "Montserrat", sans-serif !default;
+$police: "Roboto", sans-serif !default;
+
+// Container
+
+%container {
+    width: 80%;
+    margin: auto;
+}
+
+// Button
+
+%btn {
+    background: $tiers-color;
+}
+
+// Listes
+
+%ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+//     @mixin justify-content($value: space-between) {
+//     @if $value == flex-start {
+//     -webkit-box-pack: start;
+//         -moz-box-pack: start;
+//         -ms-flex-pack: start;
+//     } @else if $value == flex-end {
+//     -webkit-box-pack: end;
+//         -moz-box-pack: end;
+//         -ms-flex-pack: end;
+//     } @else if $value == space-between {
+//     -webkit-box-pack: justify;
+//         -moz-box-pack: justify;
+//         -ms-flex-pack: justify;
+//     } @else if $value == space-around {
+//         -ms-flex-pack: distribute;
+//     } @else {
+//     -webkit-box-pack: $value;
+//         -moz-box-pack: $value;
+//         -ms-flex-pack: $value;
+//     }
+//     -webkit-justify-content: $value;
+//             justify-content: $value;
+// }
