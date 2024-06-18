@@ -31,3 +31,9 @@ h1 {
     line-height: 1.2;
     margin: 0;
 }
+
+// account
+
+.btn {
+    @extend %btn;
+}

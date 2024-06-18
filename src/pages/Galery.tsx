@@ -1,7 +1,11 @@
 import React from "react";
 
 const Galery = () => {
-    return <div></div>;
+    return (
+        <div>
+            <h1>Galery</h1>
+        </div>
+    );
 };
 
 export default Galery;

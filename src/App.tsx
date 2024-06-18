@@ -25,7 +25,12 @@ function App(): JSX.Element {
                 />
                 <Route path="/galerie" element={<Galery />} />
                 <Route path="/panier" element={<Cart />} />
-                <Route path="/mon-compte" element={<Account />} />
+                <Route
+                    path="/mon-compte"
+                    element={
+                        <Account email="test@gmail.com" password="azerty" />
+                    }
+                />
             </Routes>
             <Footer year={2024} companyName="CheakyKicks" />
         </BrowserRouter>
