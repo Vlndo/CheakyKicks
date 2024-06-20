@@ -9,14 +9,20 @@ header {
     a {
         @extend %a;
     }
-    ul {
-        @extend %ul;
-        @extend %space-between;
-    }
+
     .container-header {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 100%;
         align-items: center;
+        height: 10vh;
+        ul {
+            @extend %ul;
+            @extend %space-between;
+            width: 50%;
+        }
+    }
+    .header-nav-btn {
+        @extend %a;
     }
 }
