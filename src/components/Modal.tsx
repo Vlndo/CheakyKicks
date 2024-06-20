@@ -8,11 +8,9 @@ interface Modal {
 }
 
 const Modal: React.FC<Modal> = ({ title, triggerModal, modal }) => {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-
     const handleClickBtn = () => {
         triggerModal();
-        setIsAuthenticated(!isAuthenticated);
+        localStorage.setItem("isAuthenticated", "true");
     };
 
     if (modal === true) {
