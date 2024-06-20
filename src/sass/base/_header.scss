@@ -1,0 +1,22 @@
+@import "vars";
+
+header {
+    top: 0;
+    z-index: 9;
+    background: $header-footer-bg;
+    position: sticky;
+    @extend %align-center;
+    a {
+        @extend %a;
+    }
+    ul {
+        @extend %ul;
+        @extend %space-between;
+    }
+    .container-header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+}
