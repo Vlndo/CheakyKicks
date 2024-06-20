@@ -1,1 +1,273 @@
-@import"https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";@import"https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";@import"https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";@import"https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";header .container-header ul{display:flex;justify-content:space-between}header{display:flex;align-items:center}header .header-nav-btn,header a{text-decoration:none;color:#2d2d2d;transition:ease .3s}header .header-nav-btn:hover,header a:hover{opacity:.5;cursor:pointer}.btn{text-decoration:none;color:#2d2d2d;transition:ease .3s}.btn{background:gold;padding:.5rem;width:-moz-fit-content;width:fit-content;transition:all ease .5s}.btn:hover{cursor:pointer;border:#2d2d2d solid 1px}header .container-header ul{list-style:none;margin:0;padding:0}header .container-header ul{display:flex;justify-content:space-between}header{display:flex;align-items:center}header .header-nav-btn,header a{text-decoration:none;color:#2d2d2d;transition:ease .3s}header .header-nav-btn:hover,header a:hover{opacity:.5;cursor:pointer}.btn{text-decoration:none;color:#2d2d2d;transition:ease .3s}.btn{background:gold;padding:.5rem;width:-moz-fit-content;width:fit-content;transition:all ease .5s}.btn:hover{cursor:pointer;border:#2d2d2d solid 1px}header .container-header ul{list-style:none;margin:0;padding:0}header .container-header ul{display:flex;justify-content:space-between}header{display:flex;align-items:center}header .header-nav-btn,header a{text-decoration:none;color:#2d2d2d;transition:ease .3s}header .header-nav-btn:hover,header a:hover{opacity:.5;cursor:pointer}.btn{text-decoration:none;color:#2d2d2d;transition:ease .3s}.btn{background:gold;padding:.5rem;width:-moz-fit-content;width:fit-content;transition:all ease .5s}.btn:hover{cursor:pointer;border:#2d2d2d solid 1px}header .container-header ul{list-style:none;margin:0;padding:0}header{top:0;z-index:9;background:#fff;position:sticky}header .container-header{display:flex;justify-content:space-around;width:100%;align-items:center;height:10vh}header .container-header ul{width:50%}header .container-header ul{display:flex;justify-content:space-between}header{display:flex;align-items:center}header a,header .header-nav-btn{text-decoration:none;color:#2d2d2d;transition:ease .3s}header a:hover,header .header-nav-btn:hover{opacity:.5;cursor:pointer}.btn{text-decoration:none;color:#2d2d2d;transition:ease .3s}.btn{background:gold;padding:.5rem;width:-moz-fit-content;width:fit-content;transition:all ease .5s}.btn:hover{cursor:pointer;border:#2d2d2d solid 1px}header .container-header ul{list-style:none;margin:0;padding:0}footer{background:#fff;margin:0}body{font-family:"Roboto",sans-serif;margin:0;box-sizing:border-box;overflow-x:hidden;background:#f2f2f2;color:#2d2d2d}h1{font-family:"Montserrat Alternates",sans-serif;font-size:2.5rem;font-weight:700;line-height:1.2;margin:0}/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+header .container-header ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header .header-nav-btn, header a {
+  text-decoration: none;
+  color: #2d2d2d;
+  transition: ease 0.3s;
+}
+header .header-nav-btn:hover, header a:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.btn {
+  text-decoration: none;
+  color: #2d2d2d;
+  transition: ease 0.3s;
+}
+
+.btn {
+  background: #ffd700;
+  padding: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all ease 0.5s;
+}
+.btn:hover {
+  cursor: pointer;
+  border: #2d2d2d solid 1px;
+}
+
+header .container-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .container-header ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header .header-nav-btn, header a {
+  text-decoration: none;
+  color: #2d2d2d;
+  transition: ease 0.3s;
+}
+header .header-nav-btn:hover, header a:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.btn {
+  text-decoration: none;
+  color: #2d2d2d;
+  transition: ease 0.3s;
+}
+
+.btn {
+  background: #ffd700;
+  padding: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all ease 0.5s;
+}
+.btn:hover {
+  cursor: pointer;
+  border: #2d2d2d solid 1px;
+}
+
+header .container-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .container-header ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header .header-nav-btn, header a {
+  text-decoration: none;
+  color: #2d2d2d;
+  transition: ease 0.3s;
+}
+header .header-nav-btn:hover, header a:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.btn {
+  text-decoration: none;
+  color: #2d2d2d;
+  transition: ease 0.3s;
+}
+
+.btn {
+  background: #ffd700;
+  padding: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all ease 0.5s;
+}
+.btn:hover {
+  cursor: pointer;
+  border: #2d2d2d solid 1px;
+}
+
+header .container-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  top: 0;
+  z-index: 9;
+  background: #fff;
+  position: sticky;
+}
+header .container-header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  height: 10vh;
+}
+header .container-header ul {
+  width: 50%;
+}
+header .container-header ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header a, header .header-nav-btn {
+  text-decoration: none;
+  color: #2d2d2d;
+  transition: ease 0.3s;
+}
+header a:hover, header .header-nav-btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.btn {
+  text-decoration: none;
+  color: #2d2d2d;
+  transition: ease 0.3s;
+}
+
+.btn {
+  background: #ffd700;
+  padding: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all ease 0.5s;
+}
+.btn:hover {
+  cursor: pointer;
+  border: #2d2d2d solid 1px;
+}
+
+header .container-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background: #fff;
+  margin: 0;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  margin: 16px;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin: 0 0 8px;
+}
+
+.card-description {
+  font-size: 1em;
+  margin: 0 0 16px;
+}
+
+.card-button {
+  background-color: #FFD700;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button-image {
+  width: 24px;
+  height: 24px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: #f2f2f2;
+  color: #2d2d2d;
+}
+
+h1 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}/*# sourceMappingURL=style.css.map */
