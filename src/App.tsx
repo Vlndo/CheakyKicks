@@ -6,17 +6,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Banner from "./assets/banner.jpg";
 import Galery from "./pages/Galery";
 import Cart from "./pages/Cart";
-import Account from "./pages/Account";
 import PrivateRoute from "./components/PrivateRoute";
 
 function App(): JSX.Element {
     return (
         <BrowserRouter>
-            <Header
-                title="CheakyKicks"
-                isAuthenticated={false}
-                setModal={false}
-            />
+            <Header title="CheakyKicks" />
             <Routes>
                 <Route
                     path="/"

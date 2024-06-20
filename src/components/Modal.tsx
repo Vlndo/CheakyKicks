@@ -1,30 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Btn from "./Btns";
 
 interface Modal {
     title: string;
-    setModal: boolean;
+    modal: boolean;
     triggerModal: () => void;
 }
 
-const Modal: React.FC<Modal> = ({ title, setModal, triggerModal }) => {
-    setModal === false;
-
-    triggerModal = () => {
-        if (setModal === true) {
-            setModal = false;
-            alert("ya pas de modale");
-        } else {
-            setModal = true;
-            alert("ya une modale");
-        }
-    };
+const Modal: React.FC<Modal> = ({ title, triggerModal, modal }) => {
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     const handleClickBtn = () => {
         triggerModal();
+        setIsAuthenticated(!isAuthenticated);
     };
 
-    if (setModal === true) {
+    if (modal === true) {
         return (
             <>
                 <div>

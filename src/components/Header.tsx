@@ -1,24 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Modal from "./Modal";
 
 interface HeaderProps {
     title: string;
-    isAuthenticated: false;
-    setModal: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({
-    title,
-    isAuthenticated,
-    setModal,
-}) => {
+const Header: React.FC<HeaderProps> = ({ title }) => {
+    const [modal, setModal] = useState(false);
+
     const triggerModal = () => {
-        setModal === true;
-        alert("click");
+        setModal(!modal);
+        // alert("click");
     };
 
-    isAuthenticated === false;
+    const isAuthenticated = false;
 
     if (isAuthenticated === false) {
         return (
@@ -30,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({
                         <NavLink to="/panier">Panier</NavLink>
                         <Modal
                             title="Se connecter"
-                            setModal={false}
+                            modal={modal}
                             triggerModal={triggerModal}
                         ></Modal>
                     </ul>
