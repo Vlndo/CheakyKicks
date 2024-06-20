@@ -3,10 +3,10 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import banner from "./assets/banner.jpg";
+import Banner from "./assets/banner.jpg";
 import Galery from "./pages/Galery";
 import Cart from "./pages/Cart";
-import Account from "./pages/Account";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App(): JSX.Element {
     return (
@@ -19,7 +19,7 @@ function App(): JSX.Element {
                         <Home
                             title="Achetez"
                             description="des chaussures en cuir"
-                            image={banner}
+                            image={Banner}
                         />
                     }
                 />
@@ -28,7 +28,8 @@ function App(): JSX.Element {
                 <Route
                     path="/mon-compte"
                     element={
-                        <Account email="test@gmail.com" password="azerty" />
+                        <PrivateRoute />
+                        // <Account email="test@gmail.com" password="azerty" />
                     }
                 />
             </Routes>

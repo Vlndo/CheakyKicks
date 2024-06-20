@@ -43,6 +43,7 @@ $header-footer-bg: #fff !default;
     transition: ease 0.3s;
     &:hover {
         opacity: 0.5;
+        cursor: pointer;
     }
 }
 
