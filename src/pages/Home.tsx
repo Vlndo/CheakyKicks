@@ -1,20 +1,20 @@
 import React from "react";
+import Banner from "../components/Banner";
+import Carousel from "../components/Carousel";
 
-interface BanniereProps {
-    title: string;
-    description: string;
-    image: string;
-}
+import bannerImage from "../images/banner.png";
 
-const Home: React.FC<BanniereProps> = ({ title, description, image }) => {
+
+const Home = (props) => {
+    const dataBanner = {image:bannerImage, title:"Achetez !!!", subtitle:"Les meilleurs des chaussures sont chez nous !"};
+    const dataCarouselTop = []
+    const dataCarouselRecent = []
     return (
-        <div>
-            <p>barre de recherche</p>
-            <div>
-                <img src={image} alt={description} />
-                <p>{title}</p>
-            </div>
-        </div>
+        <main>
+            <Banner data={dataBanner}/>
+            <Carousel data={dataCarouselTop} title="Nos meilleurs paires" />
+            <Carousel data={dataCarouselRecent} title="Nos nouvelles paires" />
+        </main>
     );
 };
 
