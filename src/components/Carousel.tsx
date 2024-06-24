@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "./Cards";
+import Card from "./Cards";
 
 const carousel = (props: any) => {
     return (
@@ -12,7 +12,7 @@ const carousel = (props: any) => {
             {props.data.map((data: any) => {
                 return (
                     <div>
-                        <Cards
+                        <Card
                             image={data.image}
                             title={data.title}
                             description={data.description}
