@@ -1,16 +1,17 @@
 import React from "react";
 
 interface BtnTextProps {
-    text: string;
+    text: string | null;
     className: string;
     onClick: () => void;
+    image: string | null;
 }
 
-const Btn: React.FC<BtnTextProps> = ({ text, className, onClick }) => {
+const Btn: React.FC<BtnTextProps> = ({ text, className, onClick, image }) => {
     return (
         <div>
             <div onClick={onClick} className={className}>
-                {text}
+                {image ? <img src={image} alt="coeur" /> : text}
             </div>
         </div>
     );
