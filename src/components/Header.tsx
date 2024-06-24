@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
                 <nav className="container-header">
                     <NavLink to="/">{title}</NavLink>
                     <ul>
-                        <NavLink to="/galerie">TEST</NavLink>
+                        <NavLink to="/galerie">Galerie</NavLink>
                         <NavLink to="/panier">Panier</NavLink>
                         <NavLink to="/mon-compte">Mon compte</NavLink>
                     </ul>
