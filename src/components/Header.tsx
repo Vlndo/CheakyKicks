@@ -7,16 +7,18 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ title }) => {
+    if (!localStorage.getItem("isAuthenticated")) {
+        localStorage.setItem("isAuthenticated", "false");
+    }
+
     const [modal, setModal] = useState(false);
 
     const triggerModal = () => {
         setModal(!modal);
-        // alert("click");
+        localStorage.setItem("isAuthenticated", "true");
     };
 
-    const isAuthenticated = false;
-
-    if (isAuthenticated === false) {
+    if (localStorage.getItem("isAuthenticated") === "false") {
         return (
             <header>
                 <nav className="container-header">
@@ -28,12 +30,12 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
                             title="Se connecter"
                             modal={modal}
                             triggerModal={triggerModal}
-                        ></Modal>
+                        />
                     </ul>
                 </nav>
             </header>
         );
-    } else {
+    } else if (localStorage.getItem("isAuthenticated") === "true") {
         return (
             <header>
                 <nav className="container-header">

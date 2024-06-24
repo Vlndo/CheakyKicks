@@ -1,18 +1,21 @@
-import React from "react";
-import { Navigate, useLocation, Outlet } from "react-router-dom";
-import { useAuth } from "./AuthContext";
+import React, { useEffect } from "react";
+import { useNavigate, Outlet } from "react-router-dom";
 
-interface PrivateRouteProps {}
+interface PrivateRouteProps {
+    isAuthenticated: boolean;
+}
 
-const PrivateRoute: React.FC<PrivateRouteProps> = () => {
-    const { isAuthenticated } = useAuth();
-    const location = useLocation();
+const PrivateRoute: React.FC<PrivateRouteProps> = ({ isAuthenticated }) => {
+    const navigate = useNavigate();
 
-    return isAuthenticated ? (
-        <Outlet />
-    ) : (
-        <Navigate to="/mon-compte" replace state={{ from: location }} />
-    );
+    useEffect(() => {
+        if (!isAuthenticated) {
+            alert("You are not authenticated");
+            navigate("/");
+        }
+    }, [isAuthenticated, navigate]);
+
+    return isAuthenticated ? <Outlet /> : null;
 };
 
 export default PrivateRoute;
