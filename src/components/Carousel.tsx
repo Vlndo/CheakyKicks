@@ -1,7 +1,7 @@
 import React from "react";
 import Cards from "./Cards";
 
-const carousel = (props) => {
+const carousel = (props: any) => {
     return (
         <section>
             {props.title ? (
@@ -9,7 +9,7 @@ const carousel = (props) => {
                     <h2>{props.title}</h2> <p>Laissez vous tentez !</p>
                 </>
             ) : null}
-            {props.data.map((data) => {
+            {props.data.map((data: any) => {
                 return (
                     <div>
                         <Cards
