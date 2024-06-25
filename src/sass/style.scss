@@ -24,12 +24,16 @@ body {
     color: $secondary-color;
 }
 
-h1 {
+h1, h2 {
     font-family: $police-title;
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
     margin: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
 }
 
 // account

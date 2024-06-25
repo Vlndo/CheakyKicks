@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Banner from "./assets/banner.jpg";
 import Galery from "./pages/Galery";
 import Cart from "./pages/Cart";
 import PrivateRoute from "./components/PrivateRoute";
