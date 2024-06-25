@@ -2,6 +2,7 @@ import React from "react";
 import "../css/style.css";
 import Btn from "./Btns";
 import wishList from "../assets/wishList.svg";
+import shoes from "../assets/chaussure2.jpg";
 
 const Card = (props: any) => {
     const addToCart = () => {
@@ -11,13 +12,12 @@ const Card = (props: any) => {
         console.log(props.title);
     };
 
-    console.log(props);
     return (
-        <div className="card">
-            <img src={props.image} alt={props.title} className="card-image" />
+        <div className="card" itemID={props.id} category={props.category} gender={props.gender} brand={props.brand} >
+            {props.image! ? <img src={props.image} alt={props.name} className="card-image" /> : <img src={shoes} alt={props.name} className="card-image" />}
             <div className="card-content">
-                <h2 className="card-title">{props.title}</h2>
-                <p className="card-description">{props.description}</p>
+                <h2 className="card-title">{props.name}</h2>
+                <p className="card-description">{props.price} €</p>
                 <Btn
                     className="btn"
                     image=""

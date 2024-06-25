@@ -14,9 +14,13 @@ const carousel = (props: any) => {
                     return (
                         <div>
                             <Card
-                                image={data.image}
-                                title={data.title}
-                                description={data.description}
+                                name={data.name}
+                                image={data.image.original}
+                                category={data.category}
+                                gender={data.gender}
+                                brand={data.brand}
+                                price={data.price}
+                                id={data.id}
                             />
                         </div>
                     );

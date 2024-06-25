@@ -15,12 +15,12 @@ const Account: React.FC<CredentialsProps> = () => {
     };
 
     return (
-        <div>
+        <main>
             <h1>Account</h1>
             <p>This is the account page</p>
             {/* <p>Email: {email}</p> */}
             <Btn onClick={handleBtnClick} className="btn" text="Déconnexion" />
-        </div>
+        </main>
     );
 };
 
