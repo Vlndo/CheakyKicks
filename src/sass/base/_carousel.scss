@@ -1,0 +1,9 @@
+.cardContainer  {
+    display: flex;
+}
+
+@media screen and (max-width: 500px) {
+    .cardContainer {
+        flex-direction: column;
+    }
+}

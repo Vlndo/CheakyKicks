@@ -1,10 +1,12 @@
 import React from 'react';
 
-function Banner (props)  {
+function Banner (props: any)  {
     console.log(props)
     return (
-        <section>
-            
+        <section className='banner'>
+            <img src={props.data.image} alt={props.data.alt} />
+            <p>{props.data.title}</p>
+            <h1>{props.data.subtitle}</h1>
         </section>
     );
 };
