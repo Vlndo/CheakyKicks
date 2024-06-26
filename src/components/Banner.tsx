@@ -1,7 +1,6 @@
 import React from 'react';
 
 function Banner (props: any)  {
-    console.log(props)
     return (
         <section className='banner'>
             <img src={props.data.image} alt={props.data.alt} />

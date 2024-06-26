@@ -8,12 +8,14 @@ import Cart from "./pages/Cart";
 import PrivateRoute from "./components/PrivateRoute";
 import Account from "./pages/Account";
 import { useState, useEffect } from "react";
+import Product from "./pages/Product";
+import Error404 from "./components/Error404";
 
 function App(): JSX.Element {
     const isAuthenticated = true;
     const [dataSneakers, setData] = useState([]);
     useEffect(() => {
-        fetch ('https://the-sneaker-database.p.rapidapi.com/sneakers?limit=30', {
+        fetch ('https://the-sneaker-database.p.rapidapi.com/sneakers?limit=21', {
             method: 'GET',
             headers: {
                 'x-rapidapi-key': 'f50ad8c12emsh2f681458eb945fcp140c6djsn1c02d5dff3f5',
@@ -23,7 +25,6 @@ function App(): JSX.Element {
         .then((response) => response.json())
         .then((data) => {
           setData(data.results);
-          console.log(data, dataSneakers);
         })
         .catch((error) => console.log(error));
     }, []);
@@ -46,7 +47,9 @@ function App(): JSX.Element {
                 <Route
                     element={<PrivateRoute isAuthenticated={isAuthenticated} />}
                 >
-                    <Route path="mon-compte" element={<Account />} />
+                <Route path="mon-compte" element={<Account />} />
+                <Route path="/sneakers/*" element={<Product />} />
+                <Route path="*" element={<Error404 />} />
                 </Route>
             </Routes>
             <Footer year={2024} companyName="CheakyKicks" />

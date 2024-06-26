@@ -11,10 +11,10 @@ const carousel = (props: any) => {
                 </>
             ) : null}
             <div className="cardContainer">
-                {props.data.map((data: any) => {
+                {props.data.map((data: any, index: string) => {
                     return (
-                        <div>
                             <Card
+                                key={index}
                                 name={data.name}
                                 image={data.image.original}
                                 category={data.category}
@@ -23,7 +23,6 @@ const carousel = (props: any) => {
                                 price={data.estimatedMarketValue}
                                 id={data.id}
                             />
-                        </div>
                     );
                 })}
             </div>

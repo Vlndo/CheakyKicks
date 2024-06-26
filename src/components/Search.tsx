@@ -4,8 +4,6 @@ const SearchBar = (props: any) => {
   const [searchWord, setSearchWord] = useState("")
   const searchInApi = () => {
     setSearchWord(document.querySelector('#search-word').value)
-    console.log(searchWord);
-    
     fetch (`https://the-sneaker-database.p.rapidapi.com/search?limit=15&query=${searchWord}`, {
         method: 'GET',
         headers: {
@@ -16,20 +14,17 @@ const SearchBar = (props: any) => {
     .then((response) => response.json())
     .then((data) => {
       if (!data.results[1]) {
-        console.log('vide');
         props.setData(null)
-        console.log(props.data);
         
       } else {
         props.setData(data.results);
-        console.log(data.results);
       }
 
     })
     .catch((error) => console.log(error));
   }
 
-  const handleKeyPress = (event) => {
+  const handleKeyPress = (event: any) => {
     if (event.key === 'Enter') {
       searchInApi();
     }
@@ -41,7 +36,7 @@ const SearchBar = (props: any) => {
       <input
         id='search-word'
         type="text"
-        placeholder="Rechercher..."
+        placeholder="Nike, Adidas..."
         onChange={(e) => {setSearchWord(e.target.value), console.log(searchWord)}
         }
         value={searchWord}
@@ -53,7 +48,13 @@ const SearchBar = (props: any) => {
           marginBottom: '20px'
         }}
       />
-      <button onClick={searchInApi}>Rechercher</button>
+      <button onClick={searchInApi}
+              style={{
+                padding: '10px',
+                fontSize: '16px',
+                width: '100px',
+                marginBottom: '20px'
+              }}>Rechercher</button>
     </div>
   );
 };

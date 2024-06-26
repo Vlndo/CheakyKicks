@@ -3,6 +3,7 @@ import "../css/style.css";
 import Btn from "./Btns";
 import wishList from "../assets/wishList.svg";
 import shoes from "../assets/chaussure2.jpg";
+import { Link } from "react-router-dom"
 
 const Card = (props: any) => {
     const addToCart = () => {
@@ -14,6 +15,7 @@ const Card = (props: any) => {
 
     return (
         <div className="card" itemID={props.id} category={props.category} gender={props.gender} brand={props.brand} >
+            <Link to={`/sneakers/${props.id}`}>
             {props.image! ? <img src={props.image} alt={props.name} className="card-image" /> : <img src={shoes} alt={props.name} className="card-image" />}
             <div className="card-content">
                 <h2 className="card-title">{props.name}</h2>
@@ -31,6 +33,8 @@ const Card = (props: any) => {
                     onClick={addToWishList}
                 ></Btn>
             </div>
+            </Link>
+
         </div>
     );
 };
