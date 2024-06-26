@@ -10,6 +10,9 @@ import Account from "./pages/Account";
 import { useState, useEffect } from "react";
 import Product from "./pages/Product";
 import Error404 from "./components/Error404";
+import PolConfidentialite from "./pages/PolConfidentialite";
+import GestionDonnees from "./pages/GestionDonnees";
+import ConditionOfUse from "./pages/ConditionOfUse";
 
 function App(): JSX.Element {
     const isAuthenticated = true;
@@ -50,6 +53,9 @@ function App(): JSX.Element {
                 <Route path="mon-compte" element={<Account />} />
                 <Route path="/sneakers/*" element={<Product />} />
                 <Route path="*" element={<Error404 />} />
+                <Route path="politique_de_confidentialité" element={<PolConfidentialite />}/>
+                <Route path="politique_de_gestion_de_vos_données" element={<GestionDonnees />} />
+                <Route path="conditions_d'utilisations" element={<ConditionOfUse />} />
                 </Route>
             </Routes>
             <Footer year={2024} companyName="CheakyKicks" />

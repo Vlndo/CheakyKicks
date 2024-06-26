@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Btn from "../components/Btns";
+import useScrollToTop from '../components/useScrollToTop';
 
 interface CredentialsProps {
     // email: string;
@@ -8,6 +9,7 @@ interface CredentialsProps {
 }
 
 const Account: React.FC<CredentialsProps> = () => {
+    useScrollToTop();
     let passwordForDeleteBtn = useRef(null);
     const navigate = useNavigate();
     const handleBtnClick = () => {

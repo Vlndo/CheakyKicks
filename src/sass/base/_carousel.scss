@@ -1,5 +1,11 @@
 .cardContainer  {
     display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.carousel {
+    margin: auto;
 }
 
 @media screen and (max-width: 500px) {

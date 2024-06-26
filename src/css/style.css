@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -199,6 +201,52 @@ footer {
   margin: 0;
 }
 
+footer {
+  background-color: #fff;
+  padding: 20px 0;
+}
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+footer h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer ul li {
+  margin-bottom: 5px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s;
+}
+footer ul li a:hover {
+  color: #0056b3;
+}
+footer p {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
 .mainGallery {
   display: flex;
   flex-direction: column;
@@ -280,6 +328,12 @@ footer {
 
 .cardContainer {
   display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.carousel {
+  margin: auto;
 }
 
 @media screen and (max-width: 500px) {
@@ -311,17 +365,21 @@ footer {
 .banner p {
   position: absolute;
   bottom: 100px;
-  left: 20%;
+  left: 15%;
   color: white;
   z-index: 10;
   font-size: 20px;
+  margin-right: 15%;
+  font-size: 1.2rem !important;
 }
 .banner h1 {
   position: absolute;
   bottom: 50px;
-  left: 20%;
+  left: 15%;
   color: white;
   z-index: 10;
+  margin-right: 15%;
+  font-size: 2rem !important;
 }
 @media screen and (max-width: 768px) {
   .banner p {
@@ -333,6 +391,91 @@ footer {
   }
 }
 
+header .container-header ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+header, header .container-header ul {
+  display: flex;
+  align-items: center;
+}
+
+header a, header .header-nav-btn {
+  text-decoration: none;
+  color: #2d2d2d;
+  transition: ease 0.3s;
+}
+header a:hover, header .header-nav-btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.btn {
+  text-decoration: none;
+  color: #2d2d2d;
+  transition: all ease 0.3s;
+}
+
+.btn {
+  background: #ffd700;
+  padding: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.btn:hover {
+  cursor: pointer;
+  border: #2d2d2d solid 1px;
+  transform: scale(1.05);
+}
+
+header .container-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Définit la police, la couleur de texte, et l'espacement entre les lignes pour le corps du document */
+main.otherPage {
+  line-height: 1.6;
+}
+
+/* Utilisé pour centrer et limiter la largeur du contenu, avec du padding pour l'espacement intérieur */
+.containerOther {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Padding pour l'espacement du contenu principal */
+main {
+  padding: 20px 0;
+}
+
+/* Titre principal centré avec une couleur distincte */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* Titres des sections avec des marges pour l'espacement */
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Espacement inférieur pour les paragraphes */
+p {
+  margin-bottom: 20px;
+}
+
+/* Media queries pour un design responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;

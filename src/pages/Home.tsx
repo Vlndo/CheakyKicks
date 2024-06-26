@@ -2,8 +2,12 @@ import React from "react";
 import Banner from "../components/Banner";
 import Carousel from "../components/Carousel";
 import bannerImage from "../assets/banner.jpg";
+import useScrollToTop from '../components/useScrollToTop';
+
 
 const Home = (props: any) => {
+    useScrollToTop();
+
     const dataBanner = {
         image: bannerImage,
         title: "Achetez !!!",
