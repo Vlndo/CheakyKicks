@@ -220,7 +220,6 @@ footer {
   overflow: hidden;
   width: 300px;
   margin: 16px;
-  cursor: pointer;
   transition: all 0.2s ease-in;
 }
 
@@ -234,6 +233,7 @@ footer {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+  cursor: pointer;
 }
 
 .card-content {
@@ -243,11 +243,13 @@ footer {
 .card-title {
   font-size: 1.5em;
   margin: 0 0 8px;
+  cursor: pointer;
 }
 
 .card-description {
   font-size: 1em;
   margin: 0 0 16px;
+  cursor: pointer;
 }
 
 .card-button {
