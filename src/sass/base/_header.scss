@@ -19,6 +19,7 @@ header {
         ul {
             @extend %ul;
             @extend %space-between;
+            @extend %align-center;
             width: 50%;
         }
     }

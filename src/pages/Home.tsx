@@ -11,9 +11,8 @@ const Home = (props: any) => {
         alt: "chassure en cuir",
     };
     const dataCarouselTop = props.data.slice(0, 3);
-    const dataCarouselRecent = props.data.slice(17,20);
+    const dataCarouselRecent = props.data.slice(17, 20);
 
-    
     return (
         <main className="homeMain">
             <Banner data={dataBanner} />

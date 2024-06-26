@@ -50,7 +50,7 @@ $header-footer-bg: #fff !default;
 %aBtn {
     text-decoration: none;
     color: $secondary-color;
-    transition: ease 0.3s;
+    transition: all ease 0.3s;
 }
 
 // Fonts
@@ -74,10 +74,10 @@ $police: "Roboto", sans-serif !default;
     background: $tiers-color;
     padding: 0.5rem;
     width: fit-content;
-    transition: all ease 0.5s;
     &:hover {
         cursor: pointer;
         border: $secondary-color solid 1px;
+        transform: scale(1.05);
     }
 }
 

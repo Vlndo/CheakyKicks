@@ -11,13 +11,6 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
         localStorage.setItem("isAuthenticated", "false");
     }
 
-    const [modal, setModal] = useState(false);
-
-    const triggerModal = () => {
-        setModal(!modal);
-        localStorage.setItem("isAuthenticated", "true");
-    };
-
     if (localStorage.getItem("isAuthenticated") === "false") {
         return (
             <header>
@@ -26,11 +19,8 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
                     <ul>
                         <NavLink to="/galerie">Galerie</NavLink>
                         <NavLink to="/panier">Panier</NavLink>
-                        <Modal
-                            title="Se connecter"
-                            modal={modal}
-                            triggerModal={triggerModal}
-                        />
+                        <Modal title="Se connecter" />
+                        <Modal title="S'inscrire" />
                     </ul>
                 </nav>
             </header>
