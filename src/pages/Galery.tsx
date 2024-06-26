@@ -1,27 +1,60 @@
-import React from "react";
+import React, {useState} from "react";
 import Card from "../components/Cards";
 import SearchBar from "../components/Search";
 
 
 const Galery = (props: any) => {
-    const data = ["Nike", "Adidas", "Jordan", "Puma", "New Balance"];
-    console.log(props.data);
+    const [dataSearch, setDataSearch] = useState(null)
     return (
-        <>
-            <h1>Galery</h1>
+        <main className="mainGallery">
+            <h1>Galerie</h1>
             <div style={{ padding: "20px" }}>
-                <SearchBar data={data} />
+                <SearchBar setData={setDataSearch} data={dataSearch} />
             </div>
             <section>
-                {props.data.map((item: any) => (
+                {/* {props.data.map((item: any, index: string) => (
                     <Card
-                        title={item.title}
-                        image={item.image}
-                        description={item.description}
+                        key={index}
+                        name={item.name}
+                        image={item.image.original}
+                        category={item.category}
+                        gender={item.gender}
+                        brand={item.brand}
+                        price={item.estimatedMarketValue}
+                        id={item.id}
+                        
+                    />
+                ))} */}
+
+                {/* {dataSearch != [] ? <p>Nous n'avons rien trouvé... <br />Veuillez réesayer autre chose.</p> : console.log('hi') } */}
+
+                { !dataSearch ? props.data.map((item: any, index: string) => (
+                    <Card
+                        key={index}
+                        name={item.name}
+                        image={item.image.original}
+                        category={item.category}
+                        gender={item.gender}
+                        brand={item.brand}
+                        price={item.estimatedMarketValue}
+                        id={item.id}
+                        
+                    />
+                )) : dataSearch.map((item: any, index: string) => (
+                    <Card
+                        key={index}
+                        name={item.name}
+                        image={item.image.original}
+                        category={item.category}
+                        gender={item.gender}
+                        brand={item.brand}
+                        price={item.estimatedMarketValue}
+                        id={item.id}
+                        
                     />
                 ))}
             </section>
-        </>
+        </main>
     );
 };
 
