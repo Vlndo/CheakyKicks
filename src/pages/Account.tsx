@@ -40,22 +40,30 @@ const Account: React.FC<CredentialsProps> = () => {
     };
 
     return (
-        <main>
+        <main className="container">
             <h1>Account</h1>
             <p>This is the account page</p>
-            {/* <p>Email: {email}</p> */}
-            <Btn
-                onClick={handleBtnClick}
-                className="btn"
-                text="Déconnexion"
-                image=""
-            />
-            <form action="">
-                <input type="password" required ref={passwordForDeleteBtn} />
+            <p>Email: {localStorage.getItem("email")}</p>
+            <form action="" className="account">
+                <label htmlFor="password">
+                    Entrez votre mot de passe pour supprimer votre compte
+                </label>
+                <input
+                    type="password"
+                    required
+                    ref={passwordForDeleteBtn}
+                    placeholder="Mot de passe"
+                />
                 <Btn
                     onClick={deleteAccount}
                     className="btn"
                     text="Supprimer mon compte"
+                    image=""
+                />
+                <Btn
+                    onClick={handleBtnClick}
+                    className="btn"
+                    text="Déconnexion"
                     image=""
                 />
             </form>
