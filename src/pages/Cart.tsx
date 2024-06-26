@@ -1,12 +1,17 @@
 import React from "react";
+import Panier from "../components/Panier";
 
 const Cart = () => {
-    return (
-        <main>
-            <h1>Cart</h1>
-            <p>This is cart page</p>
-        </main>
-    );
+  return (
+    <div className="Cart">
+      <header className="App-header">
+        <h1>Bienvenue dans notre boutique</h1>
+      </header>
+      <main>
+        <Panier />
+      </main>
+    </div>
+  );
 };
 
 export default Cart;
