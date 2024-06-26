@@ -7,7 +7,7 @@ header .container-header ul {
   justify-content: space-between;
 }
 
-header {
+header .container-header ul, header {
   display: flex;
   align-items: center;
 }
@@ -25,7 +25,7 @@ header .header-nav-btn:hover, header a:hover {
 .btn {
   text-decoration: none;
   color: #2d2d2d;
-  transition: ease 0.3s;
+  transition: all ease 0.3s;
 }
 
 .btn {
@@ -33,11 +33,11 @@ header .header-nav-btn:hover, header a:hover {
   padding: 0.5rem;
   width: -moz-fit-content;
   width: fit-content;
-  transition: all ease 0.5s;
 }
 .btn:hover {
   cursor: pointer;
   border: #2d2d2d solid 1px;
+  transform: scale(1.05);
 }
 
 header .container-header ul {
@@ -51,7 +51,7 @@ header .container-header ul {
   justify-content: space-between;
 }
 
-header {
+header .container-header ul, header {
   display: flex;
   align-items: center;
 }
@@ -69,7 +69,7 @@ header .header-nav-btn:hover, header a:hover {
 .btn {
   text-decoration: none;
   color: #2d2d2d;
-  transition: ease 0.3s;
+  transition: all ease 0.3s;
 }
 
 .btn {
@@ -77,11 +77,11 @@ header .header-nav-btn:hover, header a:hover {
   padding: 0.5rem;
   width: -moz-fit-content;
   width: fit-content;
-  transition: all ease 0.5s;
 }
 .btn:hover {
   cursor: pointer;
   border: #2d2d2d solid 1px;
+  transform: scale(1.05);
 }
 
 header .container-header ul {
@@ -95,7 +95,7 @@ header .container-header ul {
   justify-content: space-between;
 }
 
-header {
+header .container-header ul, header {
   display: flex;
   align-items: center;
 }
@@ -113,7 +113,7 @@ header .header-nav-btn:hover, header a:hover {
 .btn {
   text-decoration: none;
   color: #2d2d2d;
-  transition: ease 0.3s;
+  transition: all ease 0.3s;
 }
 
 .btn {
@@ -121,11 +121,11 @@ header .header-nav-btn:hover, header a:hover {
   padding: 0.5rem;
   width: -moz-fit-content;
   width: fit-content;
-  transition: all ease 0.5s;
 }
 .btn:hover {
   cursor: pointer;
   border: #2d2d2d solid 1px;
+  transform: scale(1.05);
 }
 
 header .container-header ul {
@@ -155,7 +155,7 @@ header .container-header ul {
   justify-content: space-between;
 }
 
-header {
+header, header .container-header ul {
   display: flex;
   align-items: center;
 }
@@ -173,7 +173,7 @@ header a:hover, header .header-nav-btn:hover {
 .btn {
   text-decoration: none;
   color: #2d2d2d;
-  transition: ease 0.3s;
+  transition: all ease 0.3s;
 }
 
 .btn {
@@ -181,11 +181,11 @@ header a:hover, header .header-nav-btn:hover {
   padding: 0.5rem;
   width: -moz-fit-content;
   width: fit-content;
-  transition: all ease 0.5s;
 }
 .btn:hover {
   cursor: pointer;
   border: #2d2d2d solid 1px;
+  transform: scale(1.05);
 }
 
 header .container-header ul {

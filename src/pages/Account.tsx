@@ -12,6 +12,7 @@ const Account: React.FC<CredentialsProps> = () => {
     const handleBtnClick = () => {
         localStorage.setItem("isAuthenticated", "false");
         navigate("/");
+        window.location.reload();
     };
 
     return (
@@ -19,7 +20,12 @@ const Account: React.FC<CredentialsProps> = () => {
             <h1>Account</h1>
             <p>This is the account page</p>
             {/* <p>Email: {email}</p> */}
-            <Btn onClick={handleBtnClick} className="btn" text="Déconnexion" />
+            <Btn
+                onClick={handleBtnClick}
+                className="btn"
+                text="Déconnexion"
+                image=""
+            />
         </main>
     );
 };
