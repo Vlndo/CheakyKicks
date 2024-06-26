@@ -3,7 +3,7 @@ import Btn from "./Btns";
 
 interface Modal {
     title: string;
-    x: number;
+    // x: number;
 }
 
 const Modal: React.FC<Modal> = ({ title }) => {

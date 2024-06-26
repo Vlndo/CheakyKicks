@@ -19,6 +19,9 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
                     <ul>
                         <NavLink to="/galerie">Galerie</NavLink>
                         <NavLink to="/panier">Panier</NavLink>
+                        <NavLink to="/liste-de-souhait">
+                            Liste de souhait
+                        </NavLink>
                         <Modal title="Se connecter" />
                         <Modal title="S'inscrire" />
                     </ul>
@@ -33,6 +36,9 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
                     <ul>
                         <NavLink to="/galerie">Galerie</NavLink>
                         <NavLink to="/panier">Panier</NavLink>
+                        <NavLink to="/liste-de-souhait">
+                            Liste de souhait
+                        </NavLink>
                         <NavLink to="/mon-compte">Mon compte</NavLink>
                     </ul>
                 </nav>

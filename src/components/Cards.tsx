@@ -6,12 +6,28 @@ import shoes from "../assets/chaussure2.jpg";
 import { useNavigate } from "react-router-dom";
 
 const Card = (props: any) => {
+    const LocalWishlist = {
+        id: props.id,
+        name: props.name,
+        image: props.image,
+        price: props.price,
+        alt: props.alt,
+    };
+
+    let localWishlists = JSON.parse(localStorage.getItem("wishList"));
+
+    if (!localWishlists) {
+        let localWishlists = [];
+    }
+
     const navigate = useNavigate();
     const addToCart = () => {
         console.log(props.title);
     };
     const addToWishList = () => {
-        console.log(props.title);
+        localWishlists.push(LocalWishlist);
+        localStorage.setItem("wishList", JSON.stringify(localWishlists));
+        alert(`${props.name} a bien été ajouté à la liste de souhait`);
     };
 
     const productDetails = () => {
