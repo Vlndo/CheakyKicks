@@ -12,7 +12,12 @@ import Product from "./pages/Product";
 import Error404 from "./components/Error404";
 
 function App(): JSX.Element {
-    const isAuthenticated = true;
+    // const isAuthenticated = true;
+    const [dataBase, setDataBase] = useState({users : [], isAuthenticated : {}})
+    if (localStorage.getItem("bdd")) {
+        setDataBase(localStorage.getItem("bdd"));
+        console.log(dataBase);
+    }
     const [dataSneakers, setData] = useState([]);
     useEffect(() => {
         fetch ('https://the-sneaker-database.p.rapidapi.com/sneakers?limit=21', {
@@ -33,26 +38,26 @@ function App(): JSX.Element {
 
     return (
         <BrowserRouter>
-            <Header title="CheakyKicks" />
+            <Header title="CheakyKicks" dataBase={dataBase} />
             <Routes>
                 <Route
                     path="/"
                     element={
-                        <Home data={dataSneakers}
+                        <Home data={dataSneakers} dataBase={dataBase}
                         />
                     }
                 />
-                <Route path="galerie" element={<Galery data={dataSneakers}/>} />
-                <Route path="panier" element={<Cart />} />
+                <Route path="galerie" element={<Galery data={dataSneakers} dataBase={dataBase}/>} />
+                <Route path="panier" element={<Cart dataBase={dataBase}/>} />
                 <Route
-                    element={<PrivateRoute isAuthenticated={isAuthenticated} />}
+                    element={<PrivateRoute dataBase={dataBase} />}
                 >
-                <Route path="mon-compte" element={<Account />} />
-                <Route path="/sneakers/*" element={<Product />} />
+                <Route path="mon-compte" element={<Account dataBase={dataBase}/>} />
+                <Route path="/sneakers/*" element={<Product dataBase={dataBase}/>} />
                 <Route path="*" element={<Error404 />} />
                 </Route>
             </Routes>
-            <Footer year={2024} companyName="CheakyKicks" />
+            <Footer year={2024} companyName="CheakyKicks" dataBase={dataBase}/>
         </BrowserRouter>
     );
 }

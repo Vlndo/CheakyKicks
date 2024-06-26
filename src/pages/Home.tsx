@@ -17,8 +17,8 @@ const Home = (props: any) => {
     return (
         <main className="homeMain">
             <Banner data={dataBanner} />
-            <Carousel data={dataCarouselTop} title="Nos meilleurs paires" />
-            <Carousel data={dataCarouselRecent} title="Nos nouvelles paires" />
+            <Carousel data={dataCarouselTop} dataBase={props.dataBase} title="Nos meilleurs paires" />
+            <Carousel data={dataCarouselRecent} dataBase={props.dataBase} title="Nos nouvelles paires" />
         </main>
     );
 };

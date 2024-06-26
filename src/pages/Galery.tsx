@@ -38,6 +38,7 @@ const Galery = (props: any) => {
                         brand={item.brand}
                         price={item.estimatedMarketValue}
                         id={item.id}
+                        dataBase={props.dataBase}
                         
                     />
                 )) : dataSearch.map((item: any, index: string) => (
@@ -50,7 +51,7 @@ const Galery = (props: any) => {
                         brand={item.brand}
                         price={item.estimatedMarketValue}
                         id={item.id}
-                        
+                        dataBase={props.dataBase}
                     />
                 ))}
             </section>

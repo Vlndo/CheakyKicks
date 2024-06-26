@@ -22,6 +22,7 @@ const carousel = (props: any) => {
                                 brand={data.brand}
                                 price={data.estimatedMarketValue}
                                 id={data.id}
+                                dataBase={props.dataBase}
                             />
                     );
                 })}
