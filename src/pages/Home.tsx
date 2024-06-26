@@ -10,8 +10,10 @@ const Home = (props: any) => {
         subtitle: "Les meilleurs des chaussures sont chez nous !",
         alt: "chassure en cuir",
     };
-    const dataCarouselTop = props.data;
-    const dataCarouselRecent = props.data;
+    const dataCarouselTop = props.data.slice(0, 3);
+    const dataCarouselRecent = props.data.slice(17,20);
+
+    
     return (
         <main className="homeMain">
             <Banner data={dataBanner} />

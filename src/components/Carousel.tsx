@@ -6,7 +6,8 @@ const carousel = (props: any) => {
         <section className="carousel">
             {props.title ? (
                 <>
-                    <h2>{props.title}</h2> <p>Laissez vous tentez !</p>
+                    <h2>{props.title}</h2>
+                    <p>Laissez vous tentez !</p>
                 </>
             ) : null}
             <div className="cardContainer">
@@ -19,7 +20,7 @@ const carousel = (props: any) => {
                                 category={data.category}
                                 gender={data.gender}
                                 brand={data.brand}
-                                price={data.price}
+                                price={data.estimatedMarketValue}
                                 id={data.id}
                             />
                         </div>

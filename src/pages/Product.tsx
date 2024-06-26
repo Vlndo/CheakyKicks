@@ -5,7 +5,7 @@ const Product = (props: any) => {
         <main>
             <h1>{props.name}</h1>
             <img src={props.image.original} alt={props.name} />
-            <p>{props.price}</p>
+            <p>{props.estimatedMarketValue}</p>
             <p>{props.story}</p>
         </main>
     );
