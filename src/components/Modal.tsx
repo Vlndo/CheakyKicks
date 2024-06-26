@@ -70,7 +70,6 @@ const Modal: React.FC<Modal> = ({ title }) => {
                 setModal(false);
                 alert("Utilisateur inconnu");
             }
-            return;
         }
     };
 
