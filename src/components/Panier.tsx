@@ -53,7 +53,9 @@ const Panier: React.FC = () => {
         updateCart(updatedCart);
     };
     const deleteCart = () => {
+
         setCart([]);
+        localStorage.setItem('cart', "[]");
     };
 
     const totalPrice = cart.reduce(
