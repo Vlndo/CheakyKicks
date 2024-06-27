@@ -1,0 +1,93 @@
+@import "vars";
+.mainGallery {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.mainGallery section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    margin: 16px;
+    transition: all 0.2s ease-in;
+    padding: 1%;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.473);
+    transform: scale(1.02);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 0 0 8px;
+    cursor: pointer;
+}
+
+.card-description {
+    font-size: 1em;
+    margin: 0 0 16px;
+    cursor: pointer;
+}
+
+.card-button {
+    background-color: #ffd700;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button-image {
+    width: 24px;
+    height: 24px;
+}
+
+.btnsDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.listOfItem {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
