@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import Error404 from "../components/Error404";
+import useScrollToTop from '../components/useScrollToTop';
 
 const Product = () => {
+
+    useScrollToTop();
+
     const urlcourante = document.location.href;
     const id = urlcourante.split("/sneakers/")[1]
     const [data, setData] = useState([])

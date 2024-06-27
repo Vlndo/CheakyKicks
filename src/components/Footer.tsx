@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 interface FooterProps {
     year: number;
@@ -9,7 +9,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ year, companyName }) => {
     return (
         <footer>
-            <div>
+            <div className="containerFooter">
                 <div className="footerDonnées">
                     <h3>Vos données</h3>
                     <ul>
@@ -21,7 +21,7 @@ const Footer: React.FC<FooterProps> = ({ year, companyName }) => {
                 <div className="footerNav">
                     <h3>Naviguer</h3>
                     <ul>
-                        <li><Link to="home" >Accueil</Link></li>
+                        <li><Link to="/" >Accueil</Link></li>
                         <li><Link to="Galerie" >Galerie</Link></li>
                         <li><Link to="panier" >Panier</Link></li>
                     </ul>
@@ -29,7 +29,7 @@ const Footer: React.FC<FooterProps> = ({ year, companyName }) => {
                 <div className="footerNavUser">  
                     <h3>Votre compte</h3>
                     <ul>
-                        <li><Link to="mon-compte" ></Link></li>
+                        <li><Link to="mon-compte" >Mon compte</Link></li>
                         {/* <li><Link to=""></Link></li> */}
                     </ul>
                 </div>
