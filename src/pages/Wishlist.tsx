@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Btn from "../components/Btns";
+import image from "../assets/chaussure2.jpg"
 
 const Wishlist = (props: any) => {
     const navigate = useNavigate();
@@ -51,11 +52,7 @@ const Wishlist = (props: any) => {
                     {wishList.map((data: any) => {
                         return (
                             <div id={data.id} className="card">
-                                <img
-                                    src={data.image}
-                                    alt={data.alt}
-                                    className="card-image"
-                                />
+                        {data.image ? <img src={data.image} alt="" className="card-image" /> : <img src={image} alt="" className="card-image" />}
                                 <p>{data.name}</p>
                                 <Btn
                                     text="Supprimer"
