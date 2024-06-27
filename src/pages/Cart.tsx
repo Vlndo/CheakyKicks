@@ -8,7 +8,6 @@ const Cart = (props) => {
 
     return (
         <main className="mainPanier">
-            <h1>Bienvenue dans notre boutique</h1>
             <Panier />
         </main>
     );

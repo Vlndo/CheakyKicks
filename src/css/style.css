@@ -388,6 +388,7 @@ header .container-header ul {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .listOfItem {

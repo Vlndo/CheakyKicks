@@ -70,7 +70,7 @@ const Panier: React.FC = () => {
     };
     if (localCart.length > 0) {
         return (
-            <div>
+            <main className="panierMain">
                 <h1>Votre Panier</h1>
                 <section className="listOfItem">
                     {cart.map((item) => (
@@ -106,7 +106,7 @@ const Panier: React.FC = () => {
                     ))}
                 </section>
                 <section className="btnsDiv">
-                    <p>Total : {totalPrice} €</p>
+                    <h3>Total : {totalPrice} €</h3>
                     <Btn
                         text="Vider le panier"
                         onClick={deleteCart}
@@ -114,7 +114,7 @@ const Panier: React.FC = () => {
                         image=""
                     ></Btn>
                 </section>
-            </div>
+            </main>
         );
     } else {
         return (
