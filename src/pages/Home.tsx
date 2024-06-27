@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "../components/Banner";
 import Carousel from "../components/Carousel";
-import bannerImage from "../assets/banner.jpg";
+import bannerImage from "../assets/banner.webp";
 import useScrollToTop from '../components/useScrollToTop';
 
 const Home = (props: any) => {
