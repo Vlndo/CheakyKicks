@@ -43,7 +43,7 @@ const Wishlist = (props: any) => {
         window.location.reload();
     };
 
-    if (wishList.length > 0) {
+    if (wishList.length) {
         return (
             <div>
                 <h1>Liste de souhait</h1>
@@ -78,6 +78,7 @@ const Wishlist = (props: any) => {
                     className="btn"
                     onClick={navToGallery}
                     text="Galerie de produits"
+                    image=""
                 ></Btn>
             </>
         );
