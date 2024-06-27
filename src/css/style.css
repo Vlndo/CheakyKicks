@@ -271,6 +271,7 @@ header .container-header ul {
   width: 300px;
   margin: 16px;
   transition: all 0.2s ease-in;
+  padding: 1%;
 }
 
 .card:hover {
@@ -326,6 +327,19 @@ header .container-header ul {
 .button-image {
   width: 24px;
   height: 24px;
+}
+
+.btnsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listOfItem {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 header .container-header ul {

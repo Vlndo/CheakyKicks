@@ -47,21 +47,26 @@ const Wishlist = (props: any) => {
         return (
             <div>
                 <h1>Liste de souhait</h1>
-                <div>
+                <section className="listOfItem">
                     {wishList.map((data: any) => {
                         return (
-                            <div id={data.id}>
-                                <img src={data.image} alt={data.alt} />
+                            <div id={data.id} className="card">
+                                <img
+                                    src={data.image}
+                                    alt={data.alt}
+                                    className="card-image"
+                                />
                                 <p>{data.name}</p>
                                 <Btn
                                     text="Supprimer"
                                     className="btn"
                                     onClick={deleteElement}
+                                    image=""
                                 ></Btn>
                             </div>
                         );
                     })}
-                </div>
+                </section>
             </div>
         );
     } else {

@@ -40,7 +40,7 @@ function App(): JSX.Element {
                     path="galerie"
                     element={<Galery data={dataSneakers} />}
                 />
-                <Route path="panier" element={<Cart />} />
+                <Route path="panier" element={<Cart data={dataSneakers} />} />
                 <Route
                     path="Liste-de-souhait"
                     element={<Wishlist data={dataSneakers} />}
