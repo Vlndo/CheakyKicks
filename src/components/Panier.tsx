@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Btn from "./Btns";
 import { useNavigate } from "react-router-dom";
+import image from "../assets/chaussure2.jpg"
 
 interface CartItem {
     id: number;
