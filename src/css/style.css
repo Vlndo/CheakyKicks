@@ -159,6 +159,14 @@ header .container-header {
 header .container-header ul {
   width: 50%;
 }
+@media screen and (max-width: 768px) {
+  header .container-header {
+    flex-direction: column;
+  }
+  header .container-header ul {
+    width: 95%;
+  }
+}
 header .container-header ul {
   display: flex;
   justify-content: space-between;
@@ -490,6 +498,7 @@ header .container-header ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 0;
 }
 
 header .container-header ul {

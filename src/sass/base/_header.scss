@@ -22,6 +22,12 @@ header {
             @extend %align-center;
             width: 50%;
         }
+        @media screen and (max-width:768px) {
+            flex-direction: column;
+            ul {
+                width: 95%;
+            }
+        }
     }
     .header-nav-btn {
         @extend %a;
