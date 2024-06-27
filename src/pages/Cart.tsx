@@ -7,10 +7,9 @@ const Cart = (props) => {
     useScrollToTop();
 
     return (
-        <div className="Cart">
-            <h1>Bienvenue dans notre boutique</h1>
+        <main className="mainPanier">
             <Panier />
-        </div>
+        </main>
     );
 };
 
