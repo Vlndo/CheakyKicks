@@ -7,6 +7,12 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ year, companyName }) => {
+    let isAuth = false    
+
+    if (localStorage.getItem("isAuthenticated") === "true") {
+        isAuth = true
+    }
+
     return (
         <footer>
             <div className="containerFooter">
@@ -29,8 +35,7 @@ const Footer: React.FC<FooterProps> = ({ year, companyName }) => {
                 <div className="footerNavUser">  
                     <h3>Votre compte</h3>
                     <ul>
-                        <li><Link to="mon-compte" >Mon compte</Link></li>
-                        {/* <li><Link to=""></Link></li> */}
+                        {isAuth ? <li><Link to="mon-compte" >Mon compte</Link></li> : <p>Connectez-vous</p>}
                     </ul>
                 </div>
             </div>
