@@ -1,89 +1,107 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Btn from "./Btns";
 
 interface CartItem {
-  name: string;
-  price: number;
-  quantity: number;
+    id: number;
+    name: string;
+    image: string;
+    price: number;
+    quantity: number;
 }
 
 const Panier: React.FC = () => {
-  const [items, setItems] = useState<CartItem[]>([]);
-  const [itemName, setItemName] = useState("");
-  const [itemPrice, setItemPrice] = useState("");
-  const [itemQuantity, setItemQuantity] = useState(1);
+    const [cart, setCart] = useState<CartItem[]>([]);
 
-  const addItem = () => {
-    if (itemName && itemPrice && itemQuantity > 0) {
-      setItems([
-        ...items,
-        {
-          name: itemName,
-          price: parseFloat(itemPrice),
-          quantity: itemQuantity,
-        },
-      ]);
-      setItemName("");
-      setItemPrice("");
-      setItemQuantity(1);
-    }
-  };
+    useEffect(() => {
+        // Récupérer le contenu du panier depuis le localStorage
+        const savedCart = JSON.parse(
+            localStorage.getItem("cart") || "[]"
+        ) as CartItem[];
+        setCart(savedCart);
+    }, []);
 
-  const removeItem = (index: number) => {
-    setItems(items.filter((_, i) => i !== index));
-  };
+    const updateCart = (updatedCart: CartItem[]) => {
+        setCart(updatedCart);
+        localStorage.setItem("cart", JSON.stringify(updatedCart));
+    };
 
-  const updateQuantity = (index: number, quantity: number) => {
-    const newItems = [...items];
-    newItems[index].quantity = quantity > 0 ? quantity : 1;
-    setItems(newItems);
-  };
+    const deleteItem = (id: number) => {
+        const updatedCart = cart.filter((item) => item.id !== id);
+        updateCart(updatedCart);
+    };
 
-  const total = items.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
+    const incrementQuantity = (id: number) => {
+        const updatedCart = cart.map((item) => {
+            if (item.id === id) {
+                return { ...item, quantity: item.quantity + 1 };
+            }
+            return item;
+        });
+        updateCart(updatedCart);
+    };
 
-  return (
-    <div>
-      <h2>Panier d'achat</h2>
-      <div>
-        <input
-          type="text"
-          placeholder="Nom de l'article"
-          value={itemName}
-          onChange={(e) => setItemName(e.target.value)}
-        />
-        <input
-          type="number"
-          placeholder="Prix de l'article"
-          value={itemPrice}
-          onChange={(e) => setItemPrice(e.target.value)}
-        />
-        <input
-          type="number"
-          placeholder="Quantité"
-          value={itemQuantity}
-          onChange={(e) => setItemQuantity(parseInt(e.target.value))}
-        />
-        <button onClick={addItem}>Ajouter au panier</button>
-      </div>
-      <ul>
-        {items.map((item, index) => (
-          <li key={index}>
-            {item.name} - €{item.price.toFixed(2)} x
-            <input
-              type="number"
-              value={item.quantity}
-              onChange={(e) => updateQuantity(index, parseInt(e.target.value))}
-              style={{ width: "50px", marginLeft: "10px", marginRight: "10px" }}
-            />
-            <button onClick={() => removeItem(index)}>Supprimer</button>
-          </li>
-        ))}
-      </ul>
-      <h3>Total: {total.toFixed(2)}€</h3>
-    </div>
-  );
+    const decrementQuantity = (id: number) => {
+        const updatedCart = cart.map((item) => {
+            if (item.id === id && item.quantity > 1) {
+                return { ...item, quantity: item.quantity - 1 };
+            }
+            return item;
+        });
+        updateCart(updatedCart);
+    };
+    const deleteCart = () => {
+        localStorage.removeItem("cart");
+        setCart([]);
+    };
+
+    const totalPrice = cart.reduce(
+        (acc, item) => acc + item.price * item.quantity,
+        0
+    );
+
+    return (
+        <div>
+            <h1>Votre Panier</h1>
+            <section className="listOfItem">
+                {cart.map((item) => (
+                    <div key={item.id} className="card">
+                        <img src={item.image} alt="" className="card-image" />
+                        {item.name} - Quantité: {item.quantity}
+                        <p>Prix : {item.price * item.quantity} €</p>
+                        <div className="btnsDiv">
+                            <Btn
+                                text="-"
+                                className="btn"
+                                onClick={() => decrementQuantity(item.id)}
+                                image=""
+                            />
+                            <Btn
+                                text="+"
+                                className="btn"
+                                onClick={() => incrementQuantity(item.id)}
+                                image=""
+                            />
+                            <Btn
+                                text="Supprimer"
+                                className="btn"
+                                onClick={() => deleteItem(item.id)}
+                                image=""
+                            ></Btn>
+                        </div>
+                    </div>
+                ))}
+            </section>
+            <section className="btnsDiv">
+                <p>Total : {totalPrice} €</p>
+                <Btn
+                    text="Vider le panier"
+                    onClick={deleteCart}
+                    className="btn"
+                    image=""
+                ></Btn>
+            </section>
+        </div>
+    );
 };
 
 export default Panier;
