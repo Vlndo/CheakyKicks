@@ -1,35 +1,82 @@
+import { useNavigate } from "react-router-dom";
 import Btn from "../components/Btns";
 
 const Wishlist = (props: any) => {
-    const wishList = JSON.parse(localStorage.getItem("wishList"));
+    const navigate = useNavigate();
+    const getLocalWishlist = localStorage.getItem("wishList");
+    const getLocalWishlistObjects = JSON.parse(getLocalWishlist);
+    const getLocalIsAuth = localStorage.getItem("isAuthenticated");
+    const wishList = JSON.parse(getLocalWishlist);
 
-    const deleteElement = (e: any) => {
-        console.log(e.target.parentNode.parentNode);
-        e.target.parentNode.parentNode.get;
-        e.target.parentNode.parentNode.remove();
+    const navToGallery = () => {
+        navigate("/galerie");
     };
 
-    console.log(wishList);
-    return (
-        <div>
-            <h1>Liste de souhait</h1>
+    const deleteElement = (e: any) => {
+        let elementId = e.target.parentNode.parentNode.id;
+        console.log("id de la div supprimée : ", elementId);
+        // Trouver l'index de l'objet à supprimer
+        const indexToRemove = getLocalWishlistObjects.findIndex(
+            (item: any) => item.id === elementId
+        );
+        if (indexToRemove !== -1) {
+            console.log(
+                "id de l'element supprimé dans le localStorage : ",
+                getLocalWishlistObjects[indexToRemove].id
+            );
+
+            // Supprimer l'élément du tableau
+            getLocalWishlistObjects.splice(indexToRemove, 1);
+
+            // Sauvegarder le tableau modifié dans le localStorage
+            localStorage.setItem(
+                "wishList",
+                JSON.stringify(getLocalWishlistObjects)
+            );
+
+            // Supprimer l'élément du DOM
+            e.target.parentNode.parentNode.remove();
+        } else {
+            console.log("Element non trouvé dans le localStorage");
+        }
+
+        window.location.reload();
+    };
+
+    if (wishList.length > 0) {
+        return (
             <div>
-                {wishList.map((data: any) => {
-                    return (
-                        <div id={data.id}>
-                            <img src={data.image} alt={data.alt} />
-                            <p>{data.name}</p>
-                            <Btn
-                                text="Supprimer"
-                                className="btn"
-                                onClick={deleteElement}
-                            ></Btn>
-                        </div>
-                    );
-                })}
+                <h1>Liste de souhait</h1>
+                <div>
+                    {wishList.map((data: any) => {
+                        return (
+                            <div id={data.id}>
+                                <img src={data.image} alt={data.alt} />
+                                <p>{data.name}</p>
+                                <Btn
+                                    text="Supprimer"
+                                    className="btn"
+                                    onClick={deleteElement}
+                                ></Btn>
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
-        </div>
-    );
+        );
+    } else {
+        return (
+            <>
+                <h1>Liste de souhait</h1>
+                <h2>Votre liste de souhait est vide</h2>
+                <Btn
+                    className="btn"
+                    onClick={navToGallery}
+                    text="Galerie de produits"
+                ></Btn>
+            </>
+        );
+    }
 };
 
 export default Wishlist;

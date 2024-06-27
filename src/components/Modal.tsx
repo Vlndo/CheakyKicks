@@ -67,8 +67,8 @@ const Modal: React.FC<Modal> = ({ title }) => {
                 inputMail.current.value != localStorage.getItem("email") ||
                 inputPassword.current.value != localStorage.getItem("password")
             ) {
-                alert("Utilisateur inconnu");
                 setModal(false);
+                alert("Utilisateur inconnu");
             }
         }
     };

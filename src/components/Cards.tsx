@@ -11,7 +11,6 @@ const Card = (props: any) => {
         name: props.name,
         image: props.image,
         price: props.price,
-        alt: props.alt,
     };
 
     let localWishlists = JSON.parse(localStorage.getItem("wishList"));
