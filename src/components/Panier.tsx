@@ -61,7 +61,7 @@ const Panier: React.FC = () => {
     );
 
     return (
-        <div>
+        <>
             <h1>Votre Panier</h1>
             <section className="listOfItem">
                 {cart.map((item) => (
@@ -101,7 +101,7 @@ const Panier: React.FC = () => {
                     image=""
                 ></Btn>
             </section>
-        </div>
+        </>
     );
 };
 

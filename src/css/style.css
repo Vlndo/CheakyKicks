@@ -636,6 +636,92 @@ header .container-header ul {
   padding: 0;
 }
 
+main.panierMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+main.panierMain h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+main.panierMain h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+main.panierMain .listOfItem {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+main.panierMain .card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+}
+main.panierMain .card .card-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+main.panierMain .card p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+main.panierMain .card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffd700;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+main.panierMain .card .btn:hover {
+  background-color: #b49900;
+}
+@media (max-width: 768px) {
+  main.panierMain .listOfItem {
+    flex-direction: column;
+    align-items: center;
+  }
+  main.panierMain .card {
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  main.panierMain h1 {
+    font-size: 1.5rem;
+  }
+  main.panierMain h2 {
+    font-size: 1.2rem;
+  }
+  main.panierMain .card {
+    padding: 10px;
+  }
+  main.panierMain .card .card-image {
+    margin-bottom: 10px;
+  }
+  main.panierMain .card p {
+    font-size: 1rem;
+  }
+  main.panierMain .card .btn {
+    padding: 8px 16px;
+  }
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;

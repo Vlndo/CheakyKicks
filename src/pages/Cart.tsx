@@ -3,10 +3,10 @@ import Panier from "../components/Panier";
 
 const Cart = (props) => {
     return (
-        <div className="Cart">
+        <main className="mainPanier">
             <h1>Bienvenue dans notre boutique</h1>
             <Panier />
-        </div>
+        </main>
     );
 };
 
