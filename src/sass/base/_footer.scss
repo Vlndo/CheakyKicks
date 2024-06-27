@@ -1,13 +1,10 @@
 @import "vars";
 
-footer {
-    background: $header-footer-bg;
-    margin: 0;
-}
 
 footer {
     background-color: $header-footer-bg; // Couleur de fond du footer
-    padding: 20px 0; // Padding pour le footer
+    padding: 20px 5%; // Padding pour le footer
+    margin: 30px auto auto auto;
 
   
     .containerFooter {
@@ -52,9 +49,10 @@ footer {
   
     p {
       text-align: center;
-      margin-top: 20px;
+      margin-top: 30px;
       color: #666;
       font-size: 14px;
+      margin-bottom: 0;
     }
   }
   
