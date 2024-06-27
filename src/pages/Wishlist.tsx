@@ -50,7 +50,7 @@ const Wishlist = (props: any) => {
 
     if (wishList.length) {
         return (
-            <div>
+            <main className="panierMain">
                 <h1>Liste de souhait</h1>
                 <section className="listOfItem">
                     {wishList.map((data: any) => {
@@ -68,11 +68,11 @@ const Wishlist = (props: any) => {
                         );
                     })}
                 </section>
-            </div>
+            </main>
         );
     } else {
         return (
-            <>
+            <main className="panierMain">
                 <h1>Liste de souhait</h1>
                 <h2>Votre liste de souhait est vide</h2>
                 <Btn
@@ -81,7 +81,7 @@ const Wishlist = (props: any) => {
                     text="Galerie de produits"
                     image=""
                 ></Btn>
-            </>
+            </main>
         );
     }
 };
