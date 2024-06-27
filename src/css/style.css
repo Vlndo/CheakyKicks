@@ -1,3 +1,6 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -156,6 +159,14 @@ header .container-header {
 header .container-header ul {
   width: 50%;
 }
+@media screen and (max-width: 768px) {
+  header .container-header {
+    flex-direction: column;
+  }
+  header .container-header ul {
+    width: 95%;
+  }
+}
 header .container-header ul {
   display: flex;
   justify-content: space-between;
@@ -201,8 +212,51 @@ header .container-header ul {
 }
 
 footer {
-  background: #fff;
-  margin: 0;
+  background-color: #fff;
+  padding: 20px 5%;
+  margin: 30px auto auto auto;
+}
+footer .containerFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  footer .containerFooter {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+footer h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer ul li {
+  margin-bottom: 5px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s;
+}
+footer ul li a:hover {
+  color: #0056b3;
+}
+footer p {
+  text-align: center;
+  margin-top: 30px;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 0;
 }
 
 header .container-header ul {
@@ -444,6 +498,7 @@ header .container-header ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 0;
 }
 
 header .container-header ul {
@@ -634,6 +689,210 @@ header .container-header ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+header .container-header ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+header, header .container-header ul {
+  display: flex;
+  align-items: center;
+}
+
+header a, header .header-nav-btn {
+  text-decoration: none;
+  color: #2d2d2d;
+  transition: ease 0.3s;
+}
+header a:hover, header .header-nav-btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.btn {
+  text-decoration: none;
+  color: #2d2d2d;
+  transition: all ease 0.3s;
+}
+
+.btn {
+  background: #ffd700;
+  padding: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.btn:hover {
+  cursor: pointer;
+  border: #2d2d2d solid 1px;
+  transform: scale(1.05);
+}
+
+header .container-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Définit la police, la couleur de texte, et l'espacement entre les lignes pour le corps du document */
+main.otherPage {
+  line-height: 1.6;
+}
+
+/* Utilisé pour centrer et limiter la largeur du contenu, avec du padding pour l'espacement intérieur */
+.containerOther {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Padding pour l'espacement du contenu principal */
+main {
+  padding: 20px 0;
+}
+
+/* Titre principal centré avec une couleur distincte */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* Titres des sections avec des marges pour l'espacement */
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Espacement inférieur pour les paragraphes */
+p {
+  margin-bottom: 20px;
+}
+
+/* Media queries pour un design responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+header .container-header ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+header, header .container-header ul {
+  display: flex;
+  align-items: center;
+}
+
+header a, header .header-nav-btn {
+  text-decoration: none;
+  color: #2d2d2d;
+  transition: ease 0.3s;
+}
+header a:hover, header .header-nav-btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.btn {
+  text-decoration: none;
+  color: #2d2d2d;
+  transition: all ease 0.3s;
+}
+
+.btn {
+  background: #ffd700;
+  padding: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.btn:hover {
+  cursor: pointer;
+  border: #2d2d2d solid 1px;
+  transform: scale(1.05);
+}
+
+header .container-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main.productMain {
+  font-family: "Arial, sans-serif";
+  color: #333;
+  background-color: #f8f8f8;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+main.productMain h1 {
+  font-size: 2rem;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+main.productMain img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+main.productMain p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+main.productMain p.price {
+  font-size: 1.5rem;
+  color: #2ecc71;
+  font-weight: bold;
+}
+main.productMain p.story {
+  font-style: italic;
+}
+main.productMain p.default-story {
+  font-style: italic;
+  color: black;
+}
+@media (max-width: 768px) {
+  main.productMain {
+    padding: 15px;
+  }
+  main.productMain h1 {
+    font-size: 1.5rem;
+  }
+  main.productMain p {
+    font-size: 0.9rem;
+  }
+  main.productMain p.price {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  main.productMain {
+    padding: 10px;
+  }
+  main.productMain h1 {
+    font-size: 1.2rem;
+  }
+  main.productMain p {
+    font-size: 0.8rem;
+  }
+  main.productMain p.price {
+    font-size: 1rem;
+  }
 }
 
 body {

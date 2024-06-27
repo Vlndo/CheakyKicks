@@ -1,0 +1,44 @@
+@import "vars";
+
+/* Définit la police, la couleur de texte, et l'espacement entre les lignes pour le corps du document */
+main.otherPage {
+    line-height: 1.6;
+}
+
+/* Utilisé pour centrer et limiter la largeur du contenu, avec du padding pour l'espacement intérieur */
+.containerOther {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Padding pour l'espacement du contenu principal */
+main {
+    padding: 20px 0;
+}
+
+/* Titre principal centré avec une couleur distincte */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Titres des sections avec des marges pour l'espacement */
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Espacement inférieur pour les paragraphes */
+p {
+    margin-bottom: 20px;
+}
+
+/* Media queries pour un design responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}

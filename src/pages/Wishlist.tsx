@@ -1,7 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import Btn from "../components/Btns";
+import useScrollToTop from '../components/useScrollToTop';
 
 const Wishlist = (props: any) => {
+
+    useScrollToTop();
+
     const navigate = useNavigate();
     const getLocalWishlist = localStorage.getItem("wishList");
     const getLocalWishlistObjects = JSON.parse(getLocalWishlist);

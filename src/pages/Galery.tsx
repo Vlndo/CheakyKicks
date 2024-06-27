@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Card from "../components/Cards";
 import SearchBar from "../components/Search";
+import useScrollToTop from '../components/useScrollToTop';
 
 const Galery = (props: any) => {
+    useScrollToTop();
     const [dataSearch, setDataSearch] = useState(null);
     return (
         <main className="mainGallery">
