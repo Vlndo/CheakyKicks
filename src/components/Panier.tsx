@@ -75,11 +75,7 @@ const Panier: React.FC = () => {
                 <section className="listOfItem">
                     {cart.map((item) => (
                         <div key={item.id} className="card">
-                            <img
-                                src={item.image}
-                                alt=""
-                                className="card-image"
-                            />
+                        {item.image ? <img src={item.image} alt="" className="card-image" /> : <img src={image} alt="" className="card-image" />}
                             {item.name} - Quantité: {item.quantity}
                             <p>Prix : {item.price * item.quantity} €</p>
                             <div className="btnsDiv">
