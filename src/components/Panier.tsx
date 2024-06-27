@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Btn from "./Btns";
+import { useNavigate } from "react-router-dom";
 
 interface CartItem {
     id: number;
@@ -10,6 +11,7 @@ interface CartItem {
 }
 
 const Panier: React.FC = () => {
+    const navigate = useNavigate();
     const [cart, setCart] = useState<CartItem[]>([]);
 
     useEffect(() => {
@@ -50,7 +52,6 @@ const Panier: React.FC = () => {
         updateCart(updatedCart);
     };
     const deleteCart = () => {
-        localStorage.removeItem("cart");
         setCart([]);
     };
 
@@ -59,49 +60,72 @@ const Panier: React.FC = () => {
         0
     );
 
-    return (
-        <div>
-            <h1>Votre Panier</h1>
-            <section className="listOfItem">
-                {cart.map((item) => (
-                    <div key={item.id} className="card">
-                        <img src={item.image} alt="" className="card-image" />
-                        {item.name} - Quantité: {item.quantity}
-                        <p>Prix : {item.price * item.quantity} €</p>
-                        <div className="btnsDiv">
-                            <Btn
-                                text="-"
-                                className="btn"
-                                onClick={() => decrementQuantity(item.id)}
-                                image=""
+    const localCart = JSON.parse(localStorage.getItem("cart"));
+
+    const navToGallery = () => {
+        navigate("/galerie");
+    };
+    if (localCart.length > 0) {
+        return (
+            <div>
+                <h1>Votre Panier</h1>
+                <section className="listOfItem">
+                    {cart.map((item) => (
+                        <div key={item.id} className="card">
+                            <img
+                                src={item.image}
+                                alt=""
+                                className="card-image"
                             />
-                            <Btn
-                                text="+"
-                                className="btn"
-                                onClick={() => incrementQuantity(item.id)}
-                                image=""
-                            />
-                            <Btn
-                                text="Supprimer"
-                                className="btn"
-                                onClick={() => deleteItem(item.id)}
-                                image=""
-                            ></Btn>
+                            {item.name} - Quantité: {item.quantity}
+                            <p>Prix : {item.price * item.quantity} €</p>
+                            <div className="btnsDiv">
+                                <Btn
+                                    text="-"
+                                    className="btn"
+                                    onClick={() => decrementQuantity(item.id)}
+                                    image=""
+                                />
+                                <Btn
+                                    text="+"
+                                    className="btn"
+                                    onClick={() => incrementQuantity(item.id)}
+                                    image=""
+                                />
+                                <Btn
+                                    text="Supprimer"
+                                    className="btn"
+                                    onClick={() => deleteItem(item.id)}
+                                    image=""
+                                ></Btn>
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </section>
-            <section className="btnsDiv">
-                <p>Total : {totalPrice} €</p>
+                    ))}
+                </section>
+                <section className="btnsDiv">
+                    <p>Total : {totalPrice} €</p>
+                    <Btn
+                        text="Vider le panier"
+                        onClick={deleteCart}
+                        className="btn"
+                        image=""
+                    ></Btn>
+                </section>
+            </div>
+        );
+    } else {
+        return (
+            <>
+                <h1>Votre Panier est vide </h1>
                 <Btn
-                    text="Vider le panier"
-                    onClick={deleteCart}
                     className="btn"
+                    onClick={navToGallery}
+                    text="Galerie de produits"
                     image=""
                 ></Btn>
-            </section>
-        </div>
-    );
+            </>
+        );
+    }
 };
 
 export default Panier;
