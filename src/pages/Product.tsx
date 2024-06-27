@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Error404 from "../components/Error404";
 import useScrollToTop from '../components/useScrollToTop';
+import image from "../assets/chaussure2.jpg"
 
 const Product = () => {
 
@@ -24,17 +25,21 @@ const Product = () => {
             if (dat.results[0] === undefined) {
                 setIsValidUrl(false)
             } else {
-                setIsValidUrl(true);
-                 setData(dat.results[0])                 
+                setIsValidUrl(true)                          
+                if (dat.results[0].image.original === "") {
+                    dat.results[0].image.original = image
+                }
+                 setData(dat.results[0])         
             }
             })
             .catch((error) => console.log(error));
     }, []);
-    
+
+
     return (
         <>
         {isValidUrl ?         
-            <main>
+            <main className="productMain">
             <h1>{data.name}</h1>
             <img src={data.image.original} alt={data.name} />
             <p>{data.estimatedMarketValue} €</p>
@@ -43,9 +48,6 @@ const Product = () => {
          : 
             <Error404/>}
         </>
-        
-
-
     );
 };
 
